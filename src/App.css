@@ -32,9 +32,61 @@
   right: 20px;
   font-size: 30px;
   margin-left: 50px;
-
+  color: #818181;
+}
+.sidenav .closebtn:hover{
+  color: #f1f1f1;
 }
 
+.sidenav .profile img {
+  margin: 10px;
+  display: block;
+  width: 180px;
+  border: 5px solid #2c2f3f;
+}
+
+.sidenav .profile h1 {
+  font-size: 28px;
+  margin: 0px 0px 0px 17px;
+  padding: 0;
+  font-weight: 600;
+  -ms-text-align-last: center;
+}
+
+.sidenav .profile h1 a, .sidenav .profile h1 a:hover {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.sidenav .profile .links a {
+  font-size: 22px;
+  display: inline-block;
+  background: #2d2f37;
+  color: #f1f1f1;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.5s;
+}
+
+.sidenav .profile .links a:hover {
+  background: #f1f1f1;
+  color: #000000;
+  text-decoration: none;
+}
+.pf{
+  padding-bottom: 20px;
+  border-bottom: 3px solid #2d2f37;
+}
+.pf:hover{
+  background-color: black;
+  opacity: 1;
+  transition: 0.5s;
+}
 @media screen and (max-height:450px) {
   .sidenav{ padding-top: 15px;}
   .sidenav a{font-size: 18px;}
@@ -67,9 +119,9 @@
 .background {
   background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
   background-size: 400% 400%;
-  animation: Gradient 15s ease infinite;
+  animation: Gradient 10s ease infinite;
   position: relative;
-  height: 100vh;
+  height: 300vh;
   width: 100%;
   overflow: hidden;
   padding:0;
@@ -114,6 +166,51 @@
   left: 50vw;
   top: 10vh;
 }
+.cube:nth-child(7) {
+  animation-delay: 12s;
+  left: 15vw;
+  top: 135vh;
+}
+.cube:nth-child(8) {
+  animation-delay: 14s;
+  left: 86vw;
+  top: 165vh;
+}
+.cube:nth-child(9) {
+  animation-delay: 16s;
+  left: 90vw;
+  top: 115vh;
+}
+.cube:nth-child(10) {
+  animation-delay: 18s;
+  left: 50vw;
+  top: 185vh;
+}
+.cube:nth-child(11) {
+  animation-delay: 20s;
+  left: 50vw;
+  top: 250vh;
+}
+.cube:nth-child(12) {
+  animation-delay: 22s;
+  left: 90vw;
+  top: 220vh;
+}
+.cube:nth-child(13) {
+  animation-delay: 24s;
+  left: 35vw;
+  top: 278vh;
+}
+.cube:nth-child(14) {
+  animation-delay: 26s;
+  left: 50vw;
+  top: 136vh;
+}
+.cube:nth-child(15) {
+  animation-delay: 28s;
+  left: 30vw;
+  top: 250vh;
+}
 /* ================= Header ============ */
 header{
   position: absolute;
@@ -143,7 +240,7 @@ header{
 }
 /* Header content & title & button*/
 .header-content{
-  margin-top:25%;
+  margin-top:250px;
   text-align: center;
   color:  #EFEEF5;
 }
@@ -179,3 +276,5 @@ header{
     opacity: 0;
   }
 }
+
+/******************* about*************/
