@@ -1,8 +1,6 @@
 import React from "react";
 import ReactTypingEffect from 'react-typing-effect'
 import Aalok from '../assets/images/Aalok2.jpeg'
-import octocat from '../assets/images/Octocat.jpg'
-import linkedin from '../assets/images/linkedin.svg'
 export default class NavbarComp extends React.Component{
     // constructor(props){
     //     super(props)

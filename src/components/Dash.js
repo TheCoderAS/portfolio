@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarComp from './Navbar'
 import About from './About'
+
 export default class Dash extends React.Component{
     render(){
         return(
@@ -27,14 +28,19 @@ export default class Dash extends React.Component{
                         <NavbarComp/>
                         <div className="logo"><span>AS</span></div>
                         <section className="header-content">
-                            <h1>Welcome</h1>
-                            <p>I am a Full Stack Web Developer</p><p>I'm also a software developer.</p>
+                            <div data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500">
+                                <h1>Welcome</h1>
+                            </div>
+                            <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1500">
+                                <p>Hey there! I'm <strong>Aalok Kumar</strong></p><p>A <strong>Full Stack web Developer</strong>, <strong>Software Developer</strong> and <strong>Computer Vision enthusiast</strong></p>
+                            </div>
                         </section>
                         <About/> 
-
                     </header>
                 </div>           
             </>  
         )
     }
 }
+
+

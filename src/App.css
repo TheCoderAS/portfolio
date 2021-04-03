@@ -240,11 +240,12 @@ header{
 }
 /* Header content & title & button*/
 .header-content{
-  margin-top:250px;
+  margin-top:25vh;
   text-align: center;
   color:  #EFEEF5;
 }
 .header-content h1{
+  color: #89e2f7;
   text-transform: uppercase;
   font-size: 3em;
   letter-spacing: 1px;
@@ -278,3 +279,32 @@ header{
 }
 
 /******************* about*************/
+.about{
+  margin-top: 10vh;
+
+}
+.about .details{
+  margin: 10px;
+}
+.about h1{
+  color: #89e2f7;
+  font-size: 36px;
+}
+[aos="fade-down"] {
+  opacity: 0;
+  transition-property: opacity;
+}
+[aos="fade-up"] {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.about .line{
+  position:relative;
+  border-bottom: 1px solid #89e2f7;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+.about p{
+  color: #f1f1f1;
+}
