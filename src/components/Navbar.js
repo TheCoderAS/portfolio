@@ -41,9 +41,9 @@ export default class NavbarComp extends React.Component{
                     
                 </div>
                 <div className="name">
-                    <span style={{position:'fixed',fontSize:'30px',cursor:"pointer",color:'white'}} onClick={this.openNav}>&#9776;
+                    <span style={{fontSize:'30px',cursor:"pointer",color:'white'}} onClick={this.openNav}>&#9776;
                     </span>
-                    <a target="_blank" rel="norefferer noopener " href="#dash"><span className="fa fa-arrow-up" style={{position:'fixed',bottom:'50px', right:'15px',fontSize:'30px',cursor:"pointer",color:'white'}}>
+                    <a href="#dash"><span className="fa fa-arrow-up" style={{position:'fixed',bottom:'50px', right:'15px',fontSize:'30px',cursor:"pointer",color:'white'}}>
                     </span></a>
                     <a target="_blank" rel="norefferer noopener " href="https://wa.me/qr/YVTA4USCDIJ5L1"><span className="fa fa-whatsapp" style={{position:'fixed',bottom:'50px', right:'55px',fontSize:'30px',cursor:"pointer",color:'white'}}>
                     </span></a>
