@@ -2,13 +2,27 @@ import React from "react";
 import NavbarComp from './Navbar'
 import About from './About'
 import Internships from './Internships'
+import Projects from './Projects'
+import Skills from './Skills'
+import Certificates from './Certificates'
+import Contact from "./Contact";
 
 export default class Dash extends React.Component{
     render(){
         return(
             <>
-                <div className="container-fluid">
+                <div className="container-fluid" id="dash">
                     <div className="background">
+                    <div className="cube"></div>
+                    <div className="cube"></div>
+                    <div className="cube"></div>
+                    <div className="cube"></div>
+                    <div className="cube"></div>
+                    <div className="cube"></div>
+                    <div className="cube"></div>
+                    <div className="cube"></div>
+                    <div className="cube"></div>
+                    <div className="cube"></div>
                     <div className="cube"></div>
                     <div className="cube"></div>
                     <div className="cube"></div>
@@ -38,7 +52,14 @@ export default class Dash extends React.Component{
                         </section>
                         <About/> 
                         <Internships/>
+                        <Projects/>
+                        <Skills/>
+                        <Certificates/>
+                        <Contact/>
                     </header>
+                    <footer id="footer">
+                                <h7 className="copyright">&#169;&nbsp;2021 Aalok Kumar</h7>
+	                </footer>
                 </div>           
             </>  
         )
