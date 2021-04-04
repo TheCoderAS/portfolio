@@ -43,12 +43,6 @@ export default class NavbarComp extends React.Component{
                 <div className="name">
                     <span style={{fontSize:'30px',cursor:"pointer",color:'white'}} onClick={this.openNav}>&#9776;
                     </span>
-                    <a href="#dash"><span className="fa fa-arrow-up" style={{position:'fixed',bottom:'50px', right:'15px',fontSize:'30px',cursor:"pointer",color:'white'}}>
-                    </span></a>
-                    <a target="_blank" rel="norefferer noopener " href="https://wa.me/qr/YVTA4USCDIJ5L1"><span className="fa fa-whatsapp" style={{position:'fixed',bottom:'50px', right:'55px',fontSize:'30px',cursor:"pointer",color:'white'}}>
-                    </span></a>
-                    <a target="_blank" rel="norefferer noopener " href="https://www.instagram.com/ishqbaazaalok?r=nametag"><span className="fa fa-instagram" style={{position:'fixed',bottom:'50px', right:'95px',fontSize:'30px',cursor:"pointer",color:'white'}}>
-                    </span></a>
                     <ReactTypingEffect typingDelay={1000} eraseDelay={1000} speed={100} eraseSpeed={100} text={["Aalok Kumar","Full Stack Web Developer","Software Developer"]} cursor="_" cursorRenderer={cursor=><h1>{cursor}</h1>} displayTextRenderer={(text,i)=>{
                             return(
                                 <h1 style={{marginLeft:'35px',marginTop:'4px'}}>
