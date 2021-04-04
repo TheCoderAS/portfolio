@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarComp from './Navbar'
 import About from './About'
+import Internships from './Internships'
 
 export default class Dash extends React.Component{
     render(){
@@ -36,6 +37,7 @@ export default class Dash extends React.Component{
                             </div>
                         </section>
                         <About/> 
+                        <Internships/>
                     </header>
                 </div>           
             </>  

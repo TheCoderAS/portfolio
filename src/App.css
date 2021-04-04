@@ -283,12 +283,13 @@ header{
   margin-top: 10vh;
 
 }
-.about .details{
-  margin: 10px;
-}
 .about h1{
   color: #89e2f7;
   font-size: 36px;
+}
+#role{
+  color: #89e2f7;
+  font-size: 28px;
 }
 [aos="fade-down"] {
   opacity: 0;
@@ -301,10 +302,57 @@ header{
 
 .about .line{
   position:relative;
-  border-bottom: 1px solid #89e2f7;
+  border-top: 1px solid #89e2f7;
   margin-left: 0px;
   margin-bottom: 20px;
 }
 .about p{
   color: #f1f1f1;
+}
+.line .blockquote-footer{
+  color: #89e2f7;
+}
+.list-group .list-group-item{
+  background-color: transparent;
+  color: #f1f1f1;
+  font-size: 18px;
+  padding: 5px;
+  border-bottom: 0px solid #89e2f7;
+}
+.list-group .list-group-item small{
+  margin: 0px 0px 4px 52px;
+  padding-left: 5px;
+  font-size: 16px;
+  display: inline-block;
+  border-left: 2px solid red;
+  border-radius: 5px;
+}
+.list-group .list-group-item small a{
+  color: #f1f1f1;
+}
+.list-group .list-group-item .bi{
+  margin: 10px;
+  color:#89e2f7;
+}
+#objective{
+  color: rgb(137, 216, 240);
+  font-weight: 350;
+}
+#objective a{
+  color: #f1f500;
+}
+.internships .intern-card{
+  border: 0px;
+}
+.internships .intern-head{
+  background-color: #23374d;
+}.internships .intern-body{
+  background-color: #d2f6fc;
+}
+
+.card-body{
+  padding: 0px;
+}
+.card img{
+  max-height: 450px;
 }
