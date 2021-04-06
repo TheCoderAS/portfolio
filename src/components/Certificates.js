@@ -3,7 +3,7 @@ import CertCarousel from './CertCarousel'
 
 const Certificates = (props) => {
   return (
-    <div className="about" id="certificates">
+    <div className="about" id="certificate">
         <div className="details">   
             <div data-aos="fade-up" data-aos-offset="190" data-aos-easing="fade-up" data-aos-duration="600">
                 <h1 style={{marginLeft:'10px'}}>Certificates</h1>

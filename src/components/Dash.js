@@ -58,7 +58,7 @@ export default class Dash extends React.Component{
                         <Contact/>
                     </header>
                     <footer id="footer">
-                                <a href="#dash"><span className="fa fa-arrow-up" style={{position:'fixed',bottom:'50px', right:'15px',fontSize:'30px',cursor:"pointer",color:'white'}}>
+                                <a href="#dash"><span className="fa fa-arrow-up" style={{position:'fixed', zIndex:'2',bottom:'50px', right:'15px',fontSize:'30px',cursor:"pointer",color:'white'}}>
                                 </span></a>
                                 <a target="_blank" rel="norefferer noopener " href="https://wa.me/qr/YVTA4USCDIJ5L1"><span className="fa fa-whatsapp" style={{position:'fixed',bottom:'50px', right:'55px',fontSize:'30px',cursor:"pointer",color:'white'}}>
                                 </span></a>

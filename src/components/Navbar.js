@@ -36,12 +36,12 @@ export default class NavbarComp extends React.Component{
                     <a onClick={this.closeNav} href="#internship">Internships</a>
                     <a onClick={this.closeNav} href="#project">Projects</a>
                     <a onClick={this.closeNav} href="#skill">Skills</a>
-                    <a onClick={this.closeNav} href="#certificate">#Certificates</a>
+                    <a onClick={this.closeNav} href="#certificate">Certificates</a>
                     <a onClick={this.closeNav} href="#contact">Other Activities</a>
                     
                 </div>
                 <div className="name">
-                    <span style={{fontSize:'30px',cursor:"pointer",color:'white'}} onClick={this.openNav}>&#9776;
+                    <span className="openbtn" style={{fontSize:'30px',cursor:"pointer",color:'white'}} onClick={this.openNav}>&#9776;
                     </span>
                     <ReactTypingEffect typingDelay={1000} eraseDelay={1000} speed={100} eraseSpeed={100} text={["Aalok Kumar","Full Stack Web Developer","Software Developer"]} cursor="_" cursorRenderer={cursor=><h1>{cursor}</h1>} displayTextRenderer={(text,i)=>{
                             return(
