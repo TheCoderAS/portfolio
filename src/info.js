@@ -1,5 +1,8 @@
 import firebase from './config/config'
+import * as emailjs from 'emailjs-com'
+
 const axios = require('axios');
+
 
 const API_KEY=window.env.API_KEY
 
@@ -18,28 +21,43 @@ var time=new Date().toLocaleTimeString()
 date=date.replace(/\//g,'-')
 var database = firebase.database()
 //console.log(date)
+
+function addInfo(ip){
+  var info={
+      Platform:navigator.userAgent,
+      Hardware:navigator.hardwareConcurrency,
+      Cookies:navigator.cookieEnabled,
+      AppName:navigator.appName,
+      AppCode:navigator.appCodeName,
+      AppVersion:navigator.appVersion,
+      Engine:navigator.product,
+      Language:navigator.language,
+      Online:navigator.onLine
+    }
+    var Model=info.Platform.replace(/[()]/g, "$").split("$")[1]
+  database.ref('/visitors/'+date+'/'+time+'/DeviceInfo/').set(info).then(()=>{
+    //console.log(ip)
+    let TemplateParams={
+      subject: 'New visitor',
+      info:info,
+      ip:ip,
+      model:Model
+  }
+  emailjs.send('aaloksport','template_iugcyg7',TemplateParams,'user_Hk40V6MAtnhv5GSO1Xuh4')
+  })
+}
+
 function userIP(){
     axios.get('https://ipgeolocation.abstractapi.com/v1?api_key='+API_KEY)
     .then(response => {
         //console.log(response.data);
-        database.ref('/visitors/'+date+'/'+time+'/IPInfo/').set(response.data)
+        database.ref('/visitors/'+date+'/'+time+'/IPInfo/').set(response.data).then(()=>{
+          addInfo(response.data)
+        })
     })
     .catch(error => {
         //console.log(error);
     });
-}
-function addInfo(){
-    var info={
-        Platform:navigator.userAgent,
-        Hardware:navigator.hardwareConcurrency,
-        Cookies:navigator.cookieEnabled,
-        AppName:navigator.appName,
-        AppCode:navigator.appCodeName,
-        AppVersion:navigator.appVersion,
-        Engine:navigator.product,
-        Language:navigator.language,
-        Online:navigator.onLine}
-    database.ref('/visitors/'+date+'/'+time+'/DeviceInfo/').set(info)
 }
 function locationInfo(){
     database.ref('/visitors/'+date+'/'+time).set({Time:date+" "+time})
@@ -98,6 +116,5 @@ function locationInfo(){
 export function info(){
     locationInfo()
     userIP()
-    addInfo()
 
 }
