@@ -25,8 +25,8 @@ export default class NavbarComp extends React.Component{
                             <div className="links mt-3 text-center">
                                 <a onClick={this.closeNav} href="mailto:aaloksah766626@gmail.com" className="google-plus"><i className="fa fa-envelope"></i></a>
                                 <a onClick={this.closeNav} href="tel:9504496801" className="phone"><i className="fa fa-phone"></i></a>
-                                <a target="_blank" rel="norefferer noopener " onClick={this.closeNav} href="https://www.linkedin.com/in/aalok-kumar-9497211a2" className="linkedin"><i className="fa fa-linkedin"></i></a>
-                                <a target="_blank" rel="norefferer noopener " href="https://github.com/thecoderas" className="github"><i className="fa fa-github"></i></a>
+                                <a onClick={this.closeNav} href="https://www.linkedin.com/in/aalok-kumar-9497211a2" className="linkedin"><i className="fa fa-linkedin"></i></a>
+                                <a href="https://github.com/thecoderas" className="github"><i className="fa fa-github"></i></a>
                             </div>
                         </div>
                     </div>

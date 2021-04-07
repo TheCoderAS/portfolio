@@ -45,7 +45,7 @@ export default class About extends React.Component{
                             </div>
                             <div className="text-left col-12">
                                 <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in" data-aos-duration="400">
-                                    <p id="objective">Having interest &amp; experience in Web development, I do participate in Competitive Coding on <a href="https://codeforces.com/profile/AalokKumar" target="_blank" rel="norefferer noopener">Codeforces</a>. I also have interest in Artificial Intelligence.<br></br> Apart from these, I'm also a good motivator. I like to help others with whatever I can.</p>
+                                    <p id="objective">Having interest &amp; experience in Web development, I do participate in Competitive Coding on <a href="https://codeforces.com/profile/AalokKumar">Codeforces</a>. I also have interest in Artificial Intelligence.<br></br> Apart from these, I'm also a good motivator. I like to help others with whatever I can.</p>
                                 </div>    
                             </div>
                         </div>
