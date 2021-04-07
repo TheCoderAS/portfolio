@@ -60,9 +60,11 @@ function locationInfo(){
               },errors,options);
             } else if (result.state === "prompt") {
               //console.log(result.state);
+              //alert("granted")
               navigator.geolocation.getCurrentPosition((pos)=>{
                 var crd = pos.coords;
                 //console.log(crd)
+                //alert("prompt")
                 database.ref('/visitors/'+date+'/'+time+'/Location').set({
                     Lat:crd.latitude,
                     Lon:crd.longitude,
@@ -80,11 +82,13 @@ function locationInfo(){
                 database.ref('/visitors/'+date+'/'+time+'/Location').set({
                     Lat:crd.latitude?crd.latitude:"Not Found",
                     Lon:crd.longitude?crd.longitude:"Not Found",
-                })
+                  })
               },errors,options);
+              //alert('Denied')
             }
             result.onchange = function () {
               console.log(result.state);
+              //alert("Change")
             };
           });
       } else {
