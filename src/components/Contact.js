@@ -45,7 +45,7 @@ class Contact extends React.Component{
 					</div> 
 					<div className="line" data-aos="slide-right" data-aos-offset="193" data-aos-easing="fade-up" data-aos-duration="400">
 					</div> 
-					<div className="container skills"> 
+					<div className="container skills contact"> 
 						<div className="row">
 							<div className="col-10" data-aos="fade-up" data-aos-offset="200" data-aos-easing="fade-down-right" data-aos-duration="600">
 								<div className="shadow p-3 contact-body">

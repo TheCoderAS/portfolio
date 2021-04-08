@@ -1,18 +1,47 @@
 import React from "react";
 import ReactTypingEffect from 'react-typing-effect'
 import Aalok from '../assets/images/Aalok2.jpeg'
+import firebase from '../config/config'
 export default class NavbarComp extends React.Component{
-    // constructor(props){
-    //     super(props)
-    // }
-    // componentDidMount(){
-    //     this.typeName()
-    // }
+	constructor(props){
+        super(props)
+        this.state={
+            email:'',
+        }
+        this.createUser=this.createUser.bind(this)
+        this.cancelUser=this.cancelUser.bind(this)
+        this.handleChange=this.handleChange.bind(this)
+    }
+    handleChange(e){
+        this.setState({[e.target.name]:e.target.value})
+    }    
+    
     openNav(){
         document.getElementById("mySidenav").style.width="200px"
     }
     closeNav(){
         document.getElementById("mySidenav").style.width="0"
+    }
+    database=firebase.database()
+    createUser(e){
+        e.preventDefault()
+        let email=this.state.email
+        if(email!==''){
+            var user=email.split('@')
+            this.database.ref('/users/'+user[0]).set({Email:email}).then(()=>{
+                console.log("Working")
+                window.location.href='/create/'
+            })
+        }
+    }
+    cancelUser(e){
+        e.preventDefault()
+        let email=this.state.email
+        if(email!==''){
+            //console.log(email)
+            var user=email.split('@')
+            this.database.ref('/users/'+user[0]).set({Email:email})
+        }
     }
     render(){
         return(
@@ -43,6 +72,7 @@ export default class NavbarComp extends React.Component{
                 <div className="name">
                     <span className="openbtn" style={{fontSize:'30px',cursor:"pointer",color:'white'}} onClick={this.openNav}>&#9776;
                     </span>
+                    <span data-toggle="modal" data-target="#create" className="createbtn fa fa-plus"></span>
                     <ReactTypingEffect typingDelay={1000} eraseDelay={1000} speed={100} eraseSpeed={100} text={["Aalok Kumar","Full Stack Web Developer","Software Developer"]} cursor="_" cursorRenderer={cursor=><h1>{cursor}</h1>} displayTextRenderer={(text,i)=>{
                             return(
                                 <h1 style={{marginLeft:'35px',marginTop:'4px'}}>
@@ -57,7 +87,39 @@ export default class NavbarComp extends React.Component{
                         }
                         />
 
-                 </div>
+                </div>
+                <div className="create">
+                    <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Create Portfolio</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form onSubmit={this.createUser}>
+										<div className="row input">
+											<div className="col-12">
+												<label htmlFor="email">Email<sup>*</sup></label>
+												<input type="email" placeholder="" id="email" name="email" value={this.state.email} onChange={this.handleChange} required/>
+											</div>
+										</div>
+										<div className="row input">
+                                            <div className="col-6">
+                                                <button type="button" class="btn outline btn-block btn-danger" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="By cancelling you will not be registered."onClick={this.cancelUser}>Cancel</button>
+                                            </div>
+											<div className="col-6">
+												<button type="submit" className="btn outline btn-block btn-primary send">Create</button>
+											</div>
+										</div>
+									</form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
             </>
         )
     }

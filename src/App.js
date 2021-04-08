@@ -8,13 +8,11 @@ class App extends React.Component{
         AOS.init()
 		info()
 	}
-	
-	
 	render() {
 		return (
-		<div className="App">
-			<Dash/>
-		</div>
+				<div className="App">
+					<Dash/>
+				</div>
 		);
 	}
 }

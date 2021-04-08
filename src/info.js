@@ -4,7 +4,7 @@ import * as emailjs from 'emailjs-com'
 const axios = require('axios');
 
 
-const API_KEY=window.env.API_KEY
+const API_KEY="2d3e59a5518f4edd95526efd718d7b41"
 
 var options = {
 	enableHighAccuracy: true,
@@ -114,7 +114,11 @@ function locationInfo(){
       }
 }
 export function info(){
-    locationInfo()
-    userIP()
+    if(process.env.NODE_ENV==='production'){
+      locationInfo()
+      userIP()
+    }else{
+      console.log('200 Ok')
+    }
 
 }
