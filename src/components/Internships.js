@@ -22,9 +22,9 @@ const Internships = (props) => {
             </div> 
             <div className="container internships">  
             <div data-aos="fade-right" data-aos-offset="210" data-aos-easing="fade-up" data-aos-duration="600">
-                <div class="card text-center intern-card">
+                <div className="card text-center intern-card">
                     <div data-aos="fade-down" data-aos-offset="250" data-aos-easing="fade-up" data-aos-duration="600">
-                        <div class="card-header intern-head">
+                        <div className="card-header intern-head">
                             <Nav pills>
                                 <NavItem>
                                     <NavLink style={activeTab==='1'?{backgroundColor:'#c1e6ff',color:'#0e3854',transition:'300ms'}:{color:'#f1f1f1',transition:'300ms'}}
@@ -46,19 +46,19 @@ const Internships = (props) => {
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-offset="240" data-aos-easing="fade-up" data-aos-duration="600">
-                        <div class="card-body intern-body">
+                        <div className="card-body intern-body">
                             <TabContent activeTab={activeTab}>
                                 <TabPane tabId="1">
                                     <Row>
                                         <Col sm="12">
-                                            <div class="card bg-dark text-white">
-                                                <img src={Kapadh} class="card-img img-fluid" alt="..."/>
-                                                <div class="img-text card-img-overlay">
-                                                    <h4 class="card-title">Kapadh</h4>
-                                                    <p class="card-text">Kapadh was founded by a team of university students from NIT Hamirpur. Kapadh is an online solution promoting knowledge for all. It enables people with knowledge to earn by connecting them to people who seek knowledge. It makes it easy for people to get the right guidance for solving their problems.</p>
-                                                    <p class="card-text">View: <a href="https://kapadh.com/" >https://kapadh.com/</a></p>
-                                                    <p class="card-text">Role: <b>Web Developer</b></p>
-                                                    <p class="card-text text-warning">Dec 2020 - Apr 2021</p>
+                                            <div className="card bg-dark text-white">
+                                                <img src={Kapadh} className="card-img img-fluid" alt="..."/>
+                                                <div className="img-text card-img-overlay">
+                                                    <h4 className="card-title">Kapadh</h4>
+                                                    <p className="card-text">Kapadh was founded by a team of university students from NIT Hamirpur. Kapadh is an online solution promoting knowledge for all. It enables people with knowledge to earn by connecting them to people who seek knowledge. It makes it easy for people to get the right guidance for solving their problems.</p>
+                                                    <p className="card-text">View: <a href="https://kapadh.com/" >https://kapadh.com/</a></p>
+                                                    <p className="card-text">Role: <b>Web Developer</b></p>
+                                                    <p className="card-text text-warning">Dec 2020 - Apr 2021</p>
                                                 </div>
                                             </div>               
                                         </Col>
@@ -67,13 +67,13 @@ const Internships = (props) => {
                                 <TabPane tabId="2">
                                     <Row>
                                         <Col sm="12">
-                                        <div class="card bg-dark text-white">
-                                                <img src={CodeSpeedy} class="card-img img-fluid" alt="..."/>
-                                                <div class="img-text card-img-overlay">
-                                                    <h5 class="card-title">CodeSpeedy Technology Pvt. Ltd.</h5>
-                                                    <p class="card-text">CodeSpeedy started as a coding solution blogging platform in the year 2016 to help computer programmer, web developer and software developer. Our blog posts contain articles and tutorials on Python, JavaScript, PHP, C++, CSS, WordPress and even much more.</p>
-                                                    <p class="card-text">Role: <b>C++ Programmer</b></p>
-                                                    <p class="card-text text-warning">Apr 2021 - Present</p>
+                                        <div className="card bg-dark text-white">
+                                                <img src={CodeSpeedy} className="card-img img-fluid" alt="..."/>
+                                                <div className="img-text card-img-overlay">
+                                                    <h5 className="card-title">CodeSpeedy Technology Pvt. Ltd.</h5>
+                                                    <p className="card-text">CodeSpeedy started as a coding solution blogging platform in the year 2016 to help computer programmer, web developer and software developer. Our blog posts contain articles and tutorials on Python, JavaScript, PHP, C++, CSS, WordPress and even much more.</p>
+                                                    <p className="card-text">Role: <b>C++ Programmer</b></p>
+                                                    <p className="card-text text-warning">Apr 2021 - Present</p>
                                                 </div>
                                             </div>               
                                         </Col>

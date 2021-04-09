@@ -25,9 +25,9 @@ const Projects = (props) => {
             </div> 
             <div className="container internships">  
             <div data-aos="fade-right" data-aos-offset="210" data-aos-easing="fade-up" data-aos-duration="600">
-                <div class="card text-center intern-card">
+                <div className="card text-center intern-card">
                     <div data-aos="fade-down" data-aos-offset="250" data-aos-easing="fade-up" data-aos-duration="600">
-                        <div class="card-header intern-head">
+                        <div className="card-header intern-head">
                             <Nav pills>
                                 <NavItem>
                                     <NavLink style={activeTab==='1'?{backgroundColor:'#c1e6ff',color:'#0e3854',transition:'300ms'}:{color:'#f1f1f1',transition:'300ms'}}
@@ -65,18 +65,18 @@ const Projects = (props) => {
                         </div>
                     </div>
                     <div data-aos="zoom-out-up" data-aos-offset="240" data-aos-easing="fade-up" data-aos-duration="600">
-                        <div class="card-body intern-body">
+                        <div className="card-body intern-body">
                             <TabContent activeTab={activeTab}>
                                 <TabPane tabId="1">
                                     <Row>
                                         <Col sm="12">
-                                        <div class="card bg-dark text-white">
-                                                <img src={Portfolio} class="card-img img-fluid" alt="..."/>
-                                                <div class="img-text card-img-overlay">
-                                                    <h4 class="card-title">Aalok Kumar - Portfolio</h4>
-                                                    <p class="card-text">This is my current portfolio website. It also supports that anybody else can also fill their own details and use as their potfolio. It needs an access code to access this website.</p>
-                                                    <p class="card-text">View: <a href="https://aaloksport.web.app/" >https://aaloksport.web.app/</a></p>
-                                                    <p class="card-text text-warning">Apr 2021</p>
+                                        <div className="card bg-dark text-white">
+                                                <img src={Portfolio} className="card-img img-fluid" alt="..."/>
+                                                <div className="img-text card-img-overlay">
+                                                    <h4 className="card-title">Aalok Kumar - Portfolio</h4>
+                                                    <p className="card-text">This is my current portfolio website. It also supports that anybody else can also fill their own details and use as their potfolio. It needs an access code to access this website.</p>
+                                                    <p className="card-text">View: <a href="https://aaloksport.web.app/" >https://aaloksport.web.app/</a></p>
+                                                    <p className="card-text text-warning">Apr 2021</p>
                                                 </div>
                                             </div>               
                                         </Col>
@@ -85,13 +85,13 @@ const Projects = (props) => {
                                 <TabPane tabId="2">
                                     <Row>
                                         <Col sm="12">
-                                            <div class="card bg-dark text-white">
-                                                <img src={MYINFO} class="card-img img-fluid" alt="..."/>
-                                                <div class="img-text card-img-overlay">
-                                                    <h4 class="card-title">MY INFO</h4>
-                                                    <p class="card-text">The website has features to add and access your portfolio in interactive way. The website will display all the required information that a resume has in general. Anyone can register and use this website.</p>
-                                                    <p class="card-text">View: <a href="https://linktomyinfo.web.app/" >https://linktomyinfo.web.app/</a></p>
-                                                    <p class="card-text text-warning">Jun 2020</p>
+                                            <div className="card bg-dark text-white">
+                                                <img src={MYINFO} className="card-img img-fluid" alt="..."/>
+                                                <div className="img-text card-img-overlay">
+                                                    <h4 className="card-title">MY INFO</h4>
+                                                    <p className="card-text">The website has features to add and access your portfolio in interactive way. The website will display all the required information that a resume has in general. Anyone can register and use this website.</p>
+                                                    <p className="card-text">View: <a href="https://linktomyinfo.web.app/" >https://linktomyinfo.web.app/</a></p>
+                                                    <p className="card-text text-warning">Jun 2020</p>
                                                 </div>
                                             </div>               
                                         </Col>
@@ -100,13 +100,13 @@ const Projects = (props) => {
                                 <TabPane tabId="3">
                                     <Row>
                                         <Col sm="12">
-                                            <div class="card bg-dark text-white">
-                                                <img src={AttdSys} class="card-img img-fluid" alt="..."/>
-                                                <div class="img-text card-img-overlay">
-                                                    <h4 class="card-title">Attendance Management System</h4>
-                                                    <p class="card-text">Taking Attendance during online classes is time taking. So this website work as middle-man between online classes and student, and records student's attendance.</p>
-                                                    <p class="card-text">View: <a href="https://online-attend.web.app/" >https://online-attend.web.app/</a></p>
-                                                    <p class="card-text text-warning">Aug 2020</p>
+                                            <div className="card bg-dark text-white">
+                                                <img src={AttdSys} className="card-img img-fluid" alt="..."/>
+                                                <div className="img-text card-img-overlay">
+                                                    <h4 className="card-title">Attendance Management System</h4>
+                                                    <p className="card-text">Taking Attendance during online classes is time taking. So this website work as middle-man between online classes and student, and records student's attendance.</p>
+                                                    <p className="card-text">View: <a href="https://online-attend.web.app/" >https://online-attend.web.app/</a></p>
+                                                    <p className="card-text text-warning">Aug 2020</p>
                                                 </div>
                                             </div>               
                                         </Col>
@@ -115,13 +115,13 @@ const Projects = (props) => {
                                 <TabPane tabId="4">
                                     <Row>
                                         <Col sm="12">
-                                            <div class="card bg-dark text-white">
-                                                <img src={myinfo} class="card-img img-fluid" alt="..."/>
-                                                <div class="img-text card-img-overlay">
-                                                    <h4 class="card-title">My Info</h4>
-                                                    <p class="card-text">This is my first ever Web Dev project and also my first portfolio (current details not updated).</p>
-                                                    <p class="card-text">View: <a href="https://thecoderas.github.io/my-info/" >https://thecoderas.github.io/my-info/</a></p>
-                                                    <p class="card-text text-warning">Apr 2020</p>
+                                            <div className="card bg-dark text-white">
+                                                <img src={myinfo} className="card-img img-fluid" alt="..."/>
+                                                <div className="img-text card-img-overlay">
+                                                    <h4 className="card-title">My Info</h4>
+                                                    <p className="card-text">This is my first ever Web Dev project and also my first portfolio (current details not updated).</p>
+                                                    <p className="card-text">View: <a href="https://thecoderas.github.io/my-info/" >https://thecoderas.github.io/my-info/</a></p>
+                                                    <p className="card-text text-warning">Apr 2020</p>
                                                 </div>
                                             </div>               
                                         </Col>

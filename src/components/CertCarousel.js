@@ -4,7 +4,6 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
 } from 'reactstrap';
 
 import ReactHack from '../assets/images/reacthack.jpg'
@@ -64,8 +63,7 @@ const CertCarousel = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
         >
-        <img class="img-fluid" src={item.src} alt={item.altText} style={{padding:'10%'}}/>
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <img className="img-fluid" src={item.src} alt={item.altText} style={{padding:'10%'}}/>
         </CarouselItem>
     );
     });

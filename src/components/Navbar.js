@@ -2,6 +2,8 @@ import React from "react";
 import ReactTypingEffect from 'react-typing-effect'
 import Aalok from '../assets/images/Aalok2.jpeg'
 import firebase from '../config/config'
+import $ from 'jquery'
+import {NavLink} from 'react-router-dom'
 export default class NavbarComp extends React.Component{
 	constructor(props){
         super(props)
@@ -9,8 +11,14 @@ export default class NavbarComp extends React.Component{
             email:'',
         }
         this.createUser=this.createUser.bind(this)
+        this.getUser=this.getUser.bind(this)
         this.cancelUser=this.cancelUser.bind(this)
         this.handleChange=this.handleChange.bind(this)
+    }
+    componentDidMount(){
+        $("#createbtn").collapse('show')
+        $("#getbtn").collapse('show')
+        $("#create").modal('hide')
     }
     handleChange(e){
         this.setState({[e.target.name]:e.target.value})
@@ -25,13 +33,20 @@ export default class NavbarComp extends React.Component{
     database=firebase.database()
     createUser(e){
         e.preventDefault()
-        let email=this.state.email
-        if(email!==''){
-            var user=email.split('@')
-            this.database.ref('/users/'+user[0]).set({Email:email}).then(()=>{
-                console.log("Working")
-                window.location.href='/create/'
-            })
+        if(window.confirm('Creating will delete all of your existing data with this email if you have any.\nDo you want to continue.')){
+            $("#createbtn").collapse('hide')
+            $("#loader").collapse('show')
+            
+            let email=this.state.email
+            if(email!==''){
+                var user=email.split('@')
+                this.database.ref('/users/'+user[0]).set({Email:email}).then(()=>{
+                    //console.log("Created")
+                    $("#create").modal("toggle")
+                    $("#createbtn").collapse('show')
+                    $("#loader").collapse('hide')
+                })
+            }
         }
     }
     cancelUser(e){
@@ -39,10 +54,23 @@ export default class NavbarComp extends React.Component{
         let email=this.state.email
         if(email!==''){
             //console.log(email)
-            var user=email.split('@')
-            this.database.ref('/users/'+user[0]).set({Email:email})
+            this.database.ref('/users/cancelled/').set({Email:email})
         }
     }
+    getUser(e){
+        e.preventDefault()
+        $("#getbtn").collapse('hide')
+        $("#getloader").collapse('show')
+        let email=this.state.email
+        var user=email.split('@')
+        this.database.ref('/users/'+user[0]).get().then((snap)=>{
+            //console.log("Created")
+            $("#create").modal("toggle")
+            $("#getbtn").collapse('show')
+            $("#getloader").collapse('hide')
+            console.log(snap.val())
+        })
+}
     render(){
         return(
             <>
@@ -89,16 +117,16 @@ export default class NavbarComp extends React.Component{
 
                 </div>
                 <div className="create">
-                    <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Create Portfolio</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div className="modal fade" id="create" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog modal-dialog-centered" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="exampleModalLabel">Create Portfolio</h5>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
+                                <div className="modal-body">
                                     <form onSubmit={this.createUser}>
 										<div className="row input">
 											<div className="col-12">
@@ -107,11 +135,31 @@ export default class NavbarComp extends React.Component{
 											</div>
 										</div>
 										<div className="row input">
-                                            <div className="col-6">
-                                                <button type="button" class="btn outline btn-block btn-danger" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="By cancelling you will not be registered."onClick={this.cancelUser}>Cancel</button>
+                                        <div className="col-4">
+                                                <button type="button" className="btn outline btn-block btn-danger" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="By cancelling you will not be registered."onClick={this.cancelUser}>Cancel</button>
                                             </div>
-											<div className="col-6">
-												<button type="submit" className="btn outline btn-block btn-primary send">Create</button>
+                                            <div className="col-4">
+                                                <div className="collapse" id="getloader">
+                                                    <div className="d-flex justify-content-center">
+                                                        <div className="spinner-border" role="status">
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div className="collapse" id="getbtn">
+                                                    <NavLink to='/'><button type="submit" className="btn outline btn-block btn-success send" onClick={this.getUser}>Go</button></NavLink>
+                                                </div>
+                                            </div>
+											<div className="col-4">
+                                                <div className="collapse" id="loader">
+                                                    <div className="d-flex justify-content-center">
+                                                        <div className="spinner-border" role="status">
+                                                            <span className="sr-only">Loading...</span>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div className="collapse" id="createbtn">
+                                                    <NavLink to='/create/'><button type="submit" className="btn outline btn-block btn-primary send" data-toggle="tooltip" data-placement="top" title="Creating will delete all of your exixting data with this email if you have any." onClick={this.createUser}>Create</button></NavLink>
+                                                </div>
 											</div>
 										</div>
 									</form>

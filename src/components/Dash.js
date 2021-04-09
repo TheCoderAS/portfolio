@@ -25,7 +25,7 @@ export default class Dash extends React.Component{
                                 </span></a>
                                 <a href="https://www.instagram.com/ishqbaazaalok?r=nametag"><span className="fa fa-instagram" style={{position:'fixed',bottom:'50px', right:'95px',fontSize:'30px',cursor:"pointer",color:'white'}}>
                                 </span></a>
-                                <h7 className="copyright">&#169;&nbsp;2021 Aalok Kumar</h7>
+                                <h6 className="copyright">&#169;&nbsp;2021 Aalok Kumar</h6>
 	                </footer>
                 </div>           
             </Switch>  

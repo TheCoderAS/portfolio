@@ -12,10 +12,10 @@ const Skills = (props) => {
             <div className="container skills"> 
                 <div className="row">
                     <div className="text-left col-12 col-sm-6">
-                        <ul class="list-group list-group-flush">
-                        <li data-aos="fade-up"data-aos-anchor-placement="top-bottom" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>Web Dev:&nbsp;</strong>
+                        <ul className="list-group list-group-flush">
+                        <li data-aos="fade-up"data-aos-anchor-placement="top-bottom" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" className="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>Web Dev:&nbsp;</strong>
                         <br></br><small>
-                            <table class="table table-borderless">
+                            <table className="table table-borderless">
                                 <tbody>
                                     <tr data-aos="flip-left" data-aos-offset="236" data-aos-easing="ease-in" data-aos-duration="800"  className="skill-text">
                                         <td data-aos="fade-up" data-aos-offset="236" data-aos-easing="ease-in" data-aos-duration="800"><img src="https://img.shields.io/badge/mongodb-4DB33D?style=for-the-badge&logo=mongodb&logoColor=61DAFB" alt=" "/></td>
@@ -42,10 +42,10 @@ const Skills = (props) => {
                         </ul>
                     </div>
                     <div className="text-left col-12 col-sm-6">
-                        <ul class="list-group list-group-flush">
-                        <li data-aos="fade-up" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>Programming:&nbsp;</strong>
+                        <ul className="list-group list-group-flush">
+                        <li data-aos="fade-up" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" className="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>Programming:&nbsp;</strong>
                         <br></br><small>
-                            <table class="table table-borderless">
+                            <table className="table table-borderless">
                                 <tbody>
                                     <tr data-aos="flip-left" data-aos-offset="236" data-aos-easing="ease-in" data-aos-duration="800" className="skill-text">
                                         <td data-aos="fade-up" data-aos-offset="236" data-aos-easing="ease-in" data-aos-duration="800"><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt=" "/></td>
@@ -63,10 +63,10 @@ const Skills = (props) => {
                 </div>
                 <div className="row">
                 <div className="text-left col-12 col-sm-6">
-                        <ul class="list-group list-group-flush">
-                        <li data-aos="fade-up" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>Tools:&nbsp;</strong>
+                        <ul className="list-group list-group-flush">
+                        <li data-aos="fade-up" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" className="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>Tools:&nbsp;</strong>
                         <br></br><small>
-                            <table class="table table-borderless">
+                            <table className="table table-borderless">
                                 <tbody>
                                     <tr data-aos="flip-left" data-aos-offset="236" data-aos-easing="ease-in" data-aos-duration="800" className="skill-text">
                                         <td data-aos="fade-up" data-aos-offset="236" data-aos-easing="ease-in" data-aos-duration="800"><img src="https://camo.githubusercontent.com/edd3031a0956c904634f9a394267a6ba61e9a0bb95c9512a1fbc0725b4014d03/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4769742d626c61636b3f7374796c653d666c61742d737175617265266c6f676f3d676974" height="28" alt="git" /></td>
@@ -83,8 +83,8 @@ const Skills = (props) => {
                         </ul>
                     </div>
                     <div className="text-left col-12 col-sm-6">
-                        <ul class="list-group list-group-flush">
-                        <li data-aos="fade-up" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>GitHub Stats:&nbsp;</strong>
+                        <ul className="list-group list-group-flush">
+                        <li data-aos="fade-up" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" className="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>GitHub Stats:&nbsp;</strong>
                         <br></br>                        
                             <img align="center" src="https://github-readme-stats.vercel.app/api?username=thecoderas&include_all_commits=true&show_icons=true&count_private=true&locale=en&theme=algolia" alt="thecoderas" width="387px"/>
                             </li>
