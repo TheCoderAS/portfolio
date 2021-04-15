@@ -1,7 +1,6 @@
 import React from "react";
-import { Route, Switch } from "react-router";
+import { Redirect, Route, Switch } from "react-router";
 import Header from "./Header";
-import NewUser from './NewUser'
 export default class Dash extends React.Component{
     render(){
         return(
@@ -16,8 +15,7 @@ export default class Dash extends React.Component{
                     <div className="cube"></div>
                     </div>
                     <Route exact path='/' component={Header}/>
-                    <Route exact path='/create/' component={()=><NewUser/>}/>
-
+                    <Redirect to='/'/>
                     <footer id="footer">
                                 <a href="#dash"><span className="fa fa-arrow-up" style={{position:'fixed', zIndex:'2',bottom:'50px', right:'15px',fontSize:'30px',cursor:"pointer",color:'white'}}>
                                 </span></a>

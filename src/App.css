@@ -101,7 +101,7 @@
 }
 .name .openbtn{
   position: fixed;
-  z-index: 2;
+  z-index: 1;
 }
 .name h1{
   margin-left: 10px;
@@ -398,26 +398,3 @@ input,textarea{
 }
 
 
-
-.name .createbtn{
-  color: white;
-  position: fixed;
-  right: 135px;
-  bottom: 50px;
-  z-index: 2;
-  border-radius: 50%;
-  border: 2px solid white;
-  background-color: transparent;
-  padding: 4px;
-  text-align: center;
-  text-shadow: 0px 0px;
-}
-.modal-header, .modal-body{
-  border: 0px;
-  color: #c1e6ff;
-  background-color: #0e3854;
-}
-.outline{
-  background-color: transparent;
-  border: 1px solid #c1e6ff;
-}
