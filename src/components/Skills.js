@@ -43,7 +43,7 @@ const Skills = (props) => {
                     </div>
                     <div className="text-left col-12 col-sm-6">
                         <ul className="list-group list-group-flush">
-                        <li data-aos="fade-up" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" className="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>Programming:&nbsp;</strong>
+                        <li data-aos="fade-up" data-aos-offset="250" data-aos-easing="ease-in" data-aos-duration="400" className="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg><strong>Languages:&nbsp;</strong>
                         <br></br><small>
                             <table className="table table-borderless">
                                 <tbody>

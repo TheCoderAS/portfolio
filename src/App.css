@@ -1,4 +1,8 @@
+html{
+  scroll-behavior: smooth;
+}
 /**************** Side Nav ***************/
+
 .sidenav{
   height: 100%;
   width:0;
@@ -36,6 +40,7 @@
 }
 .sidenav .closebtn:hover{
   color: #f1f1f1;
+  cursor: pointer;
 }
 
 .sidenav .profile img {
@@ -96,7 +101,7 @@
 .name{
   margin: 10px;
   text-align: left;
-  text-shadow: 1px 1px black;
+  text-shadow: 0px 0px 3px rgb(5, 124, 221);
 
 }
 .name .openbtn{
@@ -121,7 +126,8 @@
 }
 /* ============= Animation background ========= */
 .background {
-  background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+  /*background: linear-gradient(132deg, #FC415A, #591BC5, #212335);*/
+  background: linear-gradient(132deg, #000, #000, #000);
   background-size: 400% 400%;
   animation: Gradient 10s ease infinite;
   position: fixed;
@@ -191,6 +197,7 @@
   margin: 0px 0px 0px 80%;
   float: right;
   transform: rotate(-30deg);
+  cursor: pointer;
 }
 .logo span{
   color: #591BC5;
@@ -297,7 +304,7 @@
 }
 #objective{
   color: rgb(137, 216, 240);
-  font-weight: 350;
+  font-weight: 380;
 }
 #objective a{
   color: #f1f500;
@@ -398,3 +405,11 @@ input,textarea{
 }
 
 
+.project-table{
+  margin-bottom: 3%;
+}
+.project-table img{
+  border-radius: 7px;
+  width: 90px;
+  height: 25px;
+}

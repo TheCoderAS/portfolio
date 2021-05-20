@@ -57,7 +57,7 @@ const Internships = (props) => {
                                                     <h4 className="card-title">Kapadh</h4>
                                                     <p className="card-text">Kapadh was founded by a team of university students from NIT Hamirpur. Kapadh is an online solution promoting knowledge for all. It enables people with knowledge to earn by connecting them to people who seek knowledge. It makes it easy for people to get the right guidance for solving their problems.</p>
                                                     <p className="card-text">View: <a href="https://kapadh.com/" >https://kapadh.com/</a></p>
-                                                    <p className="card-text">Role: <b>Web Developer</b></p>
+                                                    <p className="card-text">Role: <b>Full Stack Developer</b></p>
                                                     <p className="card-text text-warning">Dec 2020 - Apr 2021</p>
                                                 </div>
                                             </div>               
