@@ -93,7 +93,7 @@ class Contact extends React.Component{
 											<a href="https://www.linkedin.com/in/aalok-kumar-9497211a2" className="linkedin"><i className="fa fa-linkedin"></i></a>
 										</div>
 									</div>
-									<div className="col-12" data-aos="fade-up-right" data-aos-offset="200" data-aos-easing="fade-up" data-aos-duration="600">
+									<div className="col-12" data-aos="fade-up-right" data-aos-offset="180" data-aos-easing="fade-up" data-aos-duration="600">
 										<div className="links mt-3 text-center">
 											<a href="https://github.com/thecoderas" className="github"><i className="fa fa-github"></i></a>
 										</div>

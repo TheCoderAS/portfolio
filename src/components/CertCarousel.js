@@ -1,84 +1,166 @@
-import React, { useState } from 'react';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-} from 'reactstrap';
+// import React, { useState } from 'react';
+// import {
+//   Carousel,
+//   CarouselItem,
+//   CarouselControl,
+//   CarouselIndicators,
+// } from 'reactstrap';
 
 import ReactHack from '../assets/images/reacthack.jpg'
 import ReactCourse from '../assets/images/reactcourse.jpg'
 import CodeJam from '../assets/images/codejam.jpg'
 import Prody from '../assets/images/Prody.jpg'
-import Matlab from '../assets/images/matlab.jpg'
+import ncc from '../assets/images/ncc.webp'
+import spartificialcert from '../assets/images/spartificialcert.jpeg'
+import kapadhcert from '../assets/images/kapadhcert.jpeg'
+import sannkalpcert from '../assets/images/sannkalpcert.jpeg'
+import mlcert from '../assets/images/mlcert.jpeg'
 
 
-const items = [
+import * as React from 'react';
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import MobileStepper from '@mui/material/MobileStepper';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+const images = [
   {
-    src: ReactHack,
-    key: '1'
+    label: 'React.js Certification by HackerRank',
+    imgPath: ReactHack,
   },
   {
-    src: ReactCourse,
-    key: '2'
+    label: 'Full Stack Development Specialization by Coursera',
+    imgPath: ReactCourse,
   },
   {
-    src: CodeJam,
-    key: '3',
+    label: 'Machine Learning by Coursera',
+    imgPath: mlcert,
   },
   {
-    src: Prody,
-    key: '4'
+    label: 'NCC Army- 4HP (I) COY NCC NIT HAMIRPUR',
+    imgPath: ncc,
   },
   {
-    src: Matlab,
-    key: '5'
+    label: 'Lost Lander Event (Prodyogiki 2020) by NIT Hamirpur',
+    imgPath: Prody,
+  },
+  {
+    label: 'Spartificial Freelancer Certificate',
+    imgPath: spartificialcert,
+  },
+  {
+    label: 'Sannkalp Internship Certificate',
+    imgPath: sannkalpcert,
+  },
+  {
+    label: 'Kapadh Internship Certificate',
+    imgPath: kapadhcert,
+  },
+  {
+    label: 'Codejam by Google',
+    imgPath: CodeJam,
   }
 ];
 
-const CertCarousel = (props) => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
-  
-    const next = () => {
-      if (animating) return;
-      const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-      setActiveIndex(nextIndex);
-    }
-  
-    const previous = () => {
-      if (animating) return;
-      const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-      setActiveIndex(nextIndex);
-    }
-    const goToIndex = (newIndex) => {
-        if (animating) return;
-        setActiveIndex(newIndex);
-      }
-    
-    const slides = items.map((item) => {
-    return (
-        <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-        >
-        <img className="img-fluid" src={item.src} alt={item.altText} style={{padding:'10%'}}/>
-        </CarouselItem>
-    );
-    });
-    return (
-    <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-    >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
-    );
+function CertCarousel() {
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = images.length;
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <Paper
+        square
+        elevation={0}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          height: 50,
+          pl: 2,
+          bgcolor: 'rgb(26, 32, 39)',
+        }}
+      >
+        <Typography>{images[activeStep].label}</Typography>
+      </Paper>
+      <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+      >
+        {images.map((step, index) => (
+          <div key={step.label}>
+            {Math.abs(activeStep - index) <= 2 ? (
+              <Box
+                component="img"
+                sx={{
+                  display: 'block',
+                  overflow: 'hidden',
+                  width: '100%',
+                  maxHeight: '70vh'
+                }}
+                src={step.imgPath}
+                alt={step.label}
+              />
+            ) : null}
+          </div>
+        ))}
+      </AutoPlaySwipeableViews>
+      <MobileStepper
+        sx={{ bgcolor: 'rgb(26, 32, 39)' }}
+        steps={maxSteps}
+        position="static"
+        activeStep={activeStep}
+        nextButton={
+          <Button
+            size="small"
+            onClick={handleNext}
+            disabled={activeStep === maxSteps - 1}
+            sx={{ color: activeStep === maxSteps - 1 ? 'secondary' : 'white' }}
+          >
+            Next
+            {theme.direction === 'rtl' ? (
+              <KeyboardArrowLeft />
+            ) : (
+              <KeyboardArrowRight />
+            )}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}
+            sx={{ color: activeStep === 0 ? 'secondary' : 'white' }}
+          >
+            {theme.direction === 'rtl' ? (
+              <KeyboardArrowRight />
+            ) : (
+              <KeyboardArrowLeft />
+            )}
+            Back
+          </Button>
+        }
+      />
+    </Box>
+  );
 }
 
 export default CertCarousel;
